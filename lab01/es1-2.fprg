@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es2"/>
+        <attribute name="authors" value="Utente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 01:55:20 "/>
+        <attribute name="created" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMTo0NjoxOCAiOzI3NTk="/>
+        <attribute name="edited" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMTo1NToyMCAiOzI7Mjg2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mese, giorno" type="Integer" array="False" size=""/>
+            <declare name="stagione" type="String" array="False" size=""/>
+            <assign variable="mese" expression="9"/>
+            <assign variable="giorno" expression="6"/>
+            <if expression="mese == 1 || mese == 2 || mese == 3">
+                <then>
+                    <assign variable="stagione" expression="&quot;Winter&quot;"/>
+                </then>
+                <else>
+                    <if expression="mese == 4 || mese == 5 || mese == 6">
+                        <then>
+                            <assign variable="stagione" expression="&quot;Spring&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="mese == 7 || mese == 8 || mese == 9">
+                                <then>
+                                    <assign variable="stagione" expression="&quot;Summer&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="stagione" expression="&quot;Fall&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="mese % 3 == 0 &amp;&amp; giorno &gt;= 21">
+                <then>
+                    <if expression="stagione == &quot;Winter&quot;">
+                        <then>
+                            <assign variable="stagione" expression="&quot;Spring&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="stagione == &quot;Spring&quot;">
+                                <then>
+                                    <assign variable="stagione" expression="&quot;Summer&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="stagione == &quot;Summer&quot;">
+                                        <then>
+                                            <assign variable="stagione" expression="&quot;Fall&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="stagione" expression="&quot;Winter&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <output expression="stagione" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es3"/>
+        <attribute name="authors" value="Utente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 02:05:03 "/>
+        <attribute name="created" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMTo1NToyMiAiOzI3NTQ="/>
+        <attribute name="edited" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMjowNTowMyAiOzE7Mjg1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="distanza, contaInizio, contaFine, giorniLavoro" type="Integer" array="False" size=""/>
+            <declare name="kmTotali, kmLavoro, kmPersonali" type="Integer" array="False" size=""/>
+            <declare name="percLavoro, percPersonali" type="Real" array="False" size=""/>
+            <assign variable="distanza" expression="10"/>
+            <assign variable="contaInizio" expression="11300"/>
+            <assign variable="contaFine" expression="11500"/>
+            <assign variable="giorniLavoro" expression="5"/>
+            <assign variable="kmTotali" expression="contaFine-contaInizio"/>
+            <assign variable="kmLavoro" expression="giorniLavoro*distanza"/>
+            <assign variable="kmPersonali" expression="kmTotali-kmLavoro"/>
+            <assign variable="percLavoro" expression="kmLavoro / kmTotali * 100"/>
+            <assign variable="percPersonali" expression="kmPersonali / kmTotali * 100"/>
+            <output expression="percPersonali" newline="True"/>
+            <output expression="percLavoro" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

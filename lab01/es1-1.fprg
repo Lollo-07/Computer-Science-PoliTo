@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es1"/>
+        <attribute name="authors" value="Utente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 01:46:15 "/>
+        <attribute name="created" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMTo0MToxNiAiOzI3NTI="/>
+        <attribute name="edited" value="VXRlbnRlO0xPUkVOWk9CUlVOTzsyMDI2LTEwLTAxOyIwMTo0NjoxNSAiOzE7Mjg2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start1, start2, end1, end2, s, e" type="Integer" array="False" size=""/>
+            <assign variable="start1" expression="10"/>
+            <assign variable="end1" expression="12"/>
+            <assign variable="start2" expression="11"/>
+            <assign variable="end2" expression="13"/>
+            <if expression="start1&gt;start2">
+                <then>
+                    <assign variable="s" expression="start1"/>
+                </then>
+                <else>
+                    <assign variable="s" expression="start2"/>
+                </else>
+            </if>
+            <if expression="end1 &lt; end2">
+                <then>
+                    <assign variable="e" expression="end1"/>
+                </then>
+                <else>
+                    <assign variable="e" expression="end2"/>
+                </else>
+            </if>
+            <if expression="s&lt;e">
+                <then>
+                    <output expression="&quot;Gli appuntamenti si sovrappongono&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Gli appuntamenti non si sovrappongono&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

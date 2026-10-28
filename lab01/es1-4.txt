@@ -1,0 +1,8 @@
+Posizionare una piastrella nera in alto a destra.
+Ripetere i passi 9 volte:
+- se la piastrella appena piazzata è bianca, allora scegliere la piastrella nera.
+- altrimenti scegliere una piastrella bianca
+La piastrella deve essere piazzata a destra di quella precedente.
+
+Sotto alla prima piastrella piazzare una piastrella di colore opposto e ripartire con una nuova riga.
+Ripetere i passaggi per ognuna delle 10 righe.
